@@ -13,7 +13,12 @@ pub enum Day {
   Day1 {
     #[command(subcommand)]
     part: Part
-  }
+  },
+  /// Solve day 2's problem.
+  Day2 {
+    #[command(subcommand)]
+    part: Part
+  },
 }
 
 #[derive(Subcommand, Debug)]
