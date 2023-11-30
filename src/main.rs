@@ -1,3 +1,6 @@
+#[macro_use]
+extern crate lazy_static;
+
 use clap::Parser;
 
 mod args;
@@ -5,6 +8,7 @@ mod day1;
 mod day2;
 mod day3;
 mod day4;
+mod day5;
 mod solver;
 
 use args::{Args, Day};
@@ -12,6 +16,7 @@ use day1::Day1Solver;
 use day2::Day2Solver;
 use day3::Day3Solver;
 use day4::Day4Solver;
+use day5::Day5Solver;
 use solver::Solver;
 
 fn main() {
@@ -22,5 +27,6 @@ fn main() {
         Day::Day2 { part } => Day2Solver::solve(part),
         Day::Day3 { part } => Day3Solver::solve(part),
         Day::Day4 { part } => Day4Solver::solve(part),
+        Day::Day5 { part } => Day5Solver::solve(part),
     }
 }
