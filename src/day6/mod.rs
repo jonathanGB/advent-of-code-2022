@@ -47,10 +47,10 @@ impl Day6Solver {
     // Check all pairs of characters within a message from left to right.
     // If any are equal, we apply a trick to move to the next candidate.
     // Whereas the previous implementation just moved to the next one to the right,
-    // we can realize that if the Nth character in the message matched with the
+    // we can realize that if the Xth character in the message matched with the
     // Yth character such that X < Y, then there's no point in moving to a next
     // candidate message that still contains the two identical characters.
-    // Therefore, we can proceed with the candidate starting at character N+1,
+    // Therefore, we can proceed with the candidate starting at character X+1,
     // which potentially skips many characters everytime.
     fn solve_part2_with_smart_loop(chars: &[u8]) -> usize {
         let mut marker = START_OF_MESSAGE_LENGTH;
