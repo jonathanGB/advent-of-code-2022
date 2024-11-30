@@ -13,6 +13,7 @@ mod day4;
 mod day5;
 mod day6;
 mod day7;
+mod day9;
 mod solver;
 
 use args::{Args, Day};
@@ -23,6 +24,7 @@ use day4::Day4Solver;
 use day5::Day5Solver;
 use day6::Day6Solver;
 use day7::Day7Solver;
+use day9::Day9Solver;
 use solver::Solver;
 
 fn main() {
@@ -36,5 +38,6 @@ fn main() {
         Day::Day5 { part } => Day5Solver::solve(part),
         Day::Day6 { part } => Day6Solver::solve(part),
         Day::Day7 { part } => Day7Solver::solve(part),
+        Day::Day9 { part } => Day9Solver::solve(part),
     }
 }
